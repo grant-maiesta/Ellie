@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #ff4d4d;
+  --secondary-color: #666;
+  --hover-color: #e60000;
+  --font-family: "Lobster", cursive;
+}
+
+body {
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.App-body {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-text {
+  font-size: calc(10px + 4vmin);
+  font-weight: bold;
+}
+
+.App-text:hover {
+  color: #391253;
+}
+
+.App-gif {
+  width: 80%;
+  max-width: 300px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.App-button {
+  margin: 10px;
+  padding: 15px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.App-button:before {
+  content: "\1F498";
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.App-button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.App-button:nth-child(2) {
+  background-color: var(--secondary-color);
+}
+
+.App-button:nth-child(2):before {
+  content: "\1F494";
+  color: var(--secondary-color);
+}
+
+.App-button:nth-child(2):hover {
+  background-color: #404040;
+}
+
+.App-text-success {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.App-text-success:before {
+  content: "\1F496";
+  color: var(--primary-color);
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+.App-text-success:hover {
+  color: var(--primary-color);
+}
+
+.App-text-date {
+  font-size: 18px;
+}
+
+.App-text-date:before {
+  content: "\1F495";
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+.App-success {
+  padding: 20px;
+}
+
+@media print {
+  .App-button {
+    display: none;
+  }
+}
