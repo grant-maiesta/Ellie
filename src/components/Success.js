@@ -13,7 +13,8 @@ const Success = () => (
     
     {/* Personalized success messages */}
     <p className="App-text-success">
-  Thank you, my lovely Ellie! Let us spend many more years together.<br />
+  Thank you, my lovely Ellie!<br />
+  Let us spend many more years together.<br />
   May my life become yours, and yours become mine.<br />
   I love you with all my heart and soul.  
   <br />
