@@ -35,7 +35,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowStaticMessage(false);
-    }, 6000); // 6 seconds
+    }, 3000); // 3 seconds
 
     return () => clearTimeout(timer);
   }, []);
