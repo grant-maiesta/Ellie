@@ -16,21 +16,11 @@ const rejectionTexts = [
   "Đừng hòng thoát khỏi tay anh!",
 ];
 
-// Helper function to get a random rejection message
-const getRandomRejectionText = (lastIndex) => {
-  let randomIndex;
-  do {
-    randomIndex = Math.floor(Math.random() * rejectionTexts.length);
-  } while (randomIndex === lastIndex);
-
-  return { text: rejectionTexts[randomIndex], index: randomIndex };
-};
-
 const App = () => {
   const [accepted, setAccepted] = useState(false);
   const [rejected, setRejected] = useState(false);
   const [noButtonText, setNoButtonText] = useState("No");
-  const [lastRejectedIndex, setLastRejectedIndex] = useState(-1);
+  const [currentRejectionIndex, setCurrentRejectionIndex] = useState(0);
   const [showStaticMessage, setShowStaticMessage] = useState(true);
 
   useEffect(() => {
@@ -45,9 +35,9 @@ const App = () => {
 
   const handleReject = () => {
     setRejected(true);
-    const { text, index } = getRandomRejectionText(lastRejectedIndex);
-    setNoButtonText(text);
-    setLastRejectedIndex(index);
+    const nextIndex = (currentRejectionIndex + 1) % rejectionTexts.length;
+    setNoButtonText(rejectionTexts[nextIndex]);
+    setCurrentRejectionIndex(nextIndex);
   };
 
   return (
@@ -55,7 +45,7 @@ const App = () => {
       <div className="App-body">
         {showStaticMessage ? (
           <div>
-           <h1 style={{ fontFamily: 'Lobster, cursive' }}>Dear my Ellie!</h1>
+            <h1 style={{ fontFamily: 'Lobster, cursive' }}>Dear my Ellie!</h1>
             <p>This website is created by Grant for Ellie.</p>
           </div>
         ) : (
