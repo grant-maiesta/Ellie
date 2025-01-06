@@ -21,7 +21,7 @@ const Success = () => (
     </p>
     
     <p className="App-text-success">
-      Looking forward to spending our lives together, Ellie.
+      I am looking forward to spending our life together, Ellie.
     </p>
     
     {/* Displaying the date of the special moment */}
