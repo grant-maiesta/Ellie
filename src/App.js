@@ -7,12 +7,13 @@ import madBear from "./madBear.gif";
 
 // Array of rejection messages
 const rejectionTexts = [
-  "Cũng cũng",
-  "Từ từ",
-  "Để xem sao",
-  "Chắc chưa?",
-  "Anh biết bé yêu anh",
-  "Đừng hòng thoát khỏi tay anh",
+  "Cũng cũng..",
+  "Cứ từ từ..",
+  "Để xem sao..",
+  "Cứ hớn hở hớn hở thế nhở!",
+  "Em chắc chưa?",
+  "Anh biết bé yêu anh.",
+  "Đừng hòng thoát khỏi tay anh!",
 ];
 
 // Helper function to get a random rejection message
