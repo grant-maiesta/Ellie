@@ -17,7 +17,7 @@ const Success = () => (
   May my life become yours, and yours become mine.<br />
   I love you with all my heart and soul.  
   <br />
-  <strong>Grant Mai</strong>
+ <span style={{ display: 'block', fontSize: '2em', marginTop: '20px' }}>❤️ <strong> Grant Mai </strong> ❤️</span>
 </p>
     
     <p className="App-text-success">
