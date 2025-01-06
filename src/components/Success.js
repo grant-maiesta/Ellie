@@ -17,7 +17,7 @@ const Success = () => (
   May my life become yours, and yours become mine.<br />
   I love you with all my heart and soul.  
   <br />
-  <strong>Grant</strong>
+  <strong>Grant Mai</strong>
 </p>
     
     <p className="App-text-success">
