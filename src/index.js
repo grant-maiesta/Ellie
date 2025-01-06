@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './src/index.css'; // Ensure this file exists
-import App from './src/App'; // Ensure App.js exists
-import reportWebVitals from './src/reportWebVitals'; // Ensure reportWebVitals.js exists
+import './index.css'; // Corrected path
+import App from './App'; // Corrected path
+import reportWebVitals from './reportWebVitals'; // Corrected path
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App /> {/* Corrected JSX syntax */}
+    <App />
   </React.StrictMode>
 );
 
