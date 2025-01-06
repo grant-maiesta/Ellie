@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Success from "./components/Success";
 import Asking from "./components/Asking";
@@ -30,6 +30,15 @@ const App = () => {
   const [rejected, setRejected] = useState(false);
   const [noButtonText, setNoButtonText] = useState("No");
   const [lastRejectedIndex, setLastRejectedIndex] = useState(-1);
+  const [showStaticMessage, setShowStaticMessage] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowStaticMessage(false);
+    }, 10000); // 10 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleAccept = () => setAccepted(true);
 
@@ -43,19 +52,25 @@ const App = () => {
   return (
     <div className="App">
       <div className="App-body">
-        {/* Asking to be my Valentine */}
-        {!accepted && (
-          <Asking
-            gif={rejected ? madBear : flowerBear}
-            altText={rejected ? "Rejected Bear" : "I love you Bear"}
-            handleAccept={handleAccept}
-            handleReject={handleReject}
-            noButtonText={noButtonText}
-          />
+        {showStaticMessage ? (
+          <div>
+            <h1 style={{ fontFamily: 'Lobster', cursive }}>Dear my Ellie!</h1>
+            <p>This website is created by Grant for Ellie.</p>
+          </div>
+        ) : (
+          <>
+            {!accepted && (
+              <Asking
+                gif={rejected ? madBear : flowerBear}
+                altText={rejected ? "Rejected Bear" : "I love you Bear"}
+                handleAccept={handleAccept}
+                handleReject={handleReject}
+                noButtonText={noButtonText}
+              />
+            )}
+            {accepted && <Success />}
+          </>
         )}
-
-        {/* She said YES! */}
-        {accepted && <Success />}
       </div>
     </div>
   );
