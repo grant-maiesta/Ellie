@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import Success from "./components/Success";
-import Asking from "./components/Asking";
-import flowerBear from "./flowerBear.gif";
-import madBear from "./madBear.gif";
+import "./src/App.css";
+import Success from "./src/components/Success";
+import Asking from "./src/components/Asking";
+import flowerBear from "./src/flowerBear.gif";
+import madBear from "./src/madBear.gif";
 
 // Array of rejection messages
 const rejectionTexts = [
@@ -35,7 +35,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowStaticMessage(false);
-    }, 10000); // 10 seconds
+    }, 6000); // 6 seconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -62,7 +62,7 @@ const App = () => {
             {!accepted && (
               <Asking
                 gif={rejected ? madBear : flowerBear}
-                altText={rejected ? "Rejected Bear" : "I love you Bear"}
+                altText={rejected ? "Rejected" : "I love you"}
                 handleAccept={handleAccept}
                 handleReject={handleReject}
                 noButtonText={noButtonText}
