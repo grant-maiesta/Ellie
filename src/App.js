@@ -54,7 +54,7 @@ const App = () => {
       <div className="App-body">
         {showStaticMessage ? (
           <div>
-            <h1 style={{ fontFamily: 'Lobster', cursive }}>Dear my Ellie!</h1>
+           <h1 style={{ fontFamily: 'Lobster, cursive' }}>Dear my Ellie!</h1>
             <p>This website is created by Grant for Ellie.</p>
           </div>
         ) : (
