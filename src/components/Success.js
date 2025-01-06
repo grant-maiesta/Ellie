@@ -15,7 +15,7 @@ const Success = () => (
     <p className="App-text-success">
   Thank you, my lovely Ellie!<br />
   Let us spend many more years together.<br />
-  May my life become yours, and yours become mine.<br />
+  May my life becomes yours, and yours becomes mine.<br />
   I love you with all my heart and soul.  
   <br />
  <span style={{ display: 'block', fontSize: '1.3em', marginTop: '20px' }}>❤️   <strong>   Grant Mai   </strong>   ❤️</span>
