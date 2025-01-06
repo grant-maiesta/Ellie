@@ -22,14 +22,37 @@
     />
     <!-- Title of the Page -->
     <title>From Grant to Ellie</title>
+    <style>
+      #static-message {
+        text-align: center;
+        font-family: 'Lobster', cursive;
+        font-size: 24px;
+        padding: 20px;
+      }
+      #root {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- React App Root Container -->
-    <div id="root">
-      <h1 style="font-family: 'Lobster', cursive;">Dear my Ellie!</h1>
+    <!-- Static Message Container -->
+    <div id="static-message">
+      <h1>Dear my Ellie!</h1>
       <p>This website is created by Grant for Ellie.</p>
     </div>
-     <!-- Add your JavaScript file -->
+    <!-- React App Root Container -->
+    <div id="root"></div>
+    <!-- Add your JavaScript file -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var staticMessage = document.getElementById("static-message");
+        var root = document.getElementById("root");
+        setTimeout(function() {
+          staticMessage.style.display = "none";
+          root.style.display = "block";
+        }, 10000);
+      });
+    </script>
     <script src="./src/index.js"></script>
   </body>
 </html>
