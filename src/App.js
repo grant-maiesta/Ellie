@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./src/App.css";
-import Success from "./src/components/Success";
-import Asking from "./src/components/Asking";
-import flowerBear from "./src/flowerBear.gif";
-import madBear from "./src/madBear.gif";
+import "./App.css";
+import Success from "./components/Success";
+import Asking from "./components/Asking";
+import flowerBear from "./flowerBear.gif";
+import madBear from "./madBear.gif";
 
 // Array of rejection messages
 const rejectionTexts = [
